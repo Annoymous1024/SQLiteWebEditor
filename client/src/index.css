@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --ring: hsl(221, 83%, 53%);
+  --radius: 0.5rem;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, monospace;
+}
+
+.syntax-highlight {
+  color: hsl(0, 0%, 98%);
+}
+
+.syntax-keyword { 
+  color: hsl(270, 100%, 80%); 
+}
+
+.syntax-string { 
+  color: hsl(120, 100%, 75%); 
+}
+
+.syntax-comment { 
+  color: hsl(0, 0%, 60%); 
+  font-style: italic; 
+}
+
+.syntax-number { 
+  color: hsl(30, 100%, 75%); 
+}
+
+.drag-over {
+  border-color: hsl(221, 83%, 53%);
+  background-color: hsl(221, 83%, 53%, 0.1);
+}
+
+.tree-item {
+  transition: all 0.2s ease;
+}
+
+.tree-item:hover {
+  background-color: hsl(240, 3.7%, 20%);
+}
+
+.tab-active {
+  border-bottom: 2px solid hsl(221, 83%, 53%);
+  color: hsl(221, 83%, 53%);
+}
+
+.editor-line-numbers {
+  background: hsl(240, 3.7%, 10%);
+  border-right: 1px solid hsl(240, 3.7%, 25%);
+  color: hsl(240, 5%, 50%);
+  user-select: none;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
